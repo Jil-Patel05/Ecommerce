@@ -12,7 +12,9 @@ const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
   let { loading, error, products } = useSelector((state) => state.products);
-
+  const data = ["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFx1pD-5y61mO3S-e1grpCuf24c6zMIGanYrbzcIwB&s",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzbmT5f6Uqu-p0tDftdiTuI8u187X2fyvoUXkcKcWz&s"
+  ];
     useEffect(() => {
         if (error) {
             alert.error(error);
@@ -36,7 +38,8 @@ const Home = () => {
             Scroll
           </button>
         </a>
-      </div>
+            </div>
+       
 
       <h2 className="homeHeading" id="container">Featured Products</h2>
       <div className="container">

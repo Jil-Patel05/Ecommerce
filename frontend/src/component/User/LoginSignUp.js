@@ -38,7 +38,7 @@ const LoginSignUp = ({ history, location }) => {
   const loginSubmit = (e) => {
       e.preventDefault();
       console.error(loginEmail);
-    dispatch(login(loginEmail, loginPassword));
+      dispatch(login(loginEmail, loginPassword));
       if (error.statusCode >= 400) {
         alert.success("Invalid data or email,please try again");
         return;
